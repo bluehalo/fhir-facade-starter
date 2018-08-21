@@ -27,8 +27,5 @@ The facade server uses [passortjs](http://www.passportjs.org/) for authenticatio
 ## Having trouble with something?
 If you have questions specific to Docker or Node, please consider asking on Stack Overflow.  They already have a lot of support on these topics. If your questions is related to the FHIR specification, please review that documentation at [https://www.hl7.org/fhir/](https://www.hl7.org/fhir/). Any questions related to this specific package, please ask in the issues section. Also, if you think you are experiencing a bug or see something incorrect with the spec, please file an issue so we can help you as soon as we can.
 
-## Want to Contribute?
-Please see the [CONTRIBUTING.md](./.github/CONTRIBUTING.md) for contributing guidelines.
-
 ## License
 This project is [MIT licensed](./LICENSE).
