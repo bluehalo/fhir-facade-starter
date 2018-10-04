@@ -381,7 +381,7 @@ let fhirServerConfig = {
 		},
 		[RESOURCES.PATIENT]: {
 			service: './src/services/patient/patient.service.js',
-			versions: [ VERSIONS['3_0_1'] ]
+			versions: [ VERSIONS['3_0_1'], VERSIONS['1_0_2'] ]
 		},
 		[RESOURCES.PAYMENTNOTICE]: {
 			service: './src/services/paymentnotice/paymentnotice.service.js',
