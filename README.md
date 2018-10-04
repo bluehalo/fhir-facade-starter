@@ -22,7 +22,7 @@ At this point you can now start testing the endpoints. Depending what profiles y
 4.  Write your queries and test!
 
 ## Authorization
-The facade server uses [passortjs](http://www.passportjs.org/) for authentication.  This server comes with a bearer strategy template.  You can implement your own passport strategy and reference it in `./src/config.js` to conforms to your AuthZ server.  For more information on authorization please visit [http://docs.smarthealthit.org/authorization/](http://docs.smarthealthit.org/authorization/).
+The facade server uses [passportjs](http://www.passportjs.org/) for authentication.  This server comes with a bearer strategy template.  You can implement your own passport strategy and reference it in `./src/config.js` to conforms to your AuthZ server.  For more information on authorization please visit [http://docs.smarthealthit.org/authorization/](http://docs.smarthealthit.org/authorization/).
 
 ## Having trouble with something?
 If you have questions specific to Docker or Node, please consider asking on Stack Overflow.  They already have a lot of support on these topics. If your questions is related to the FHIR specification, please review that documentation at [https://www.hl7.org/fhir/](https://www.hl7.org/fhir/). Any questions related to this specific package, please ask in the issues section. Also, if you think you are experiencing a bug or see something incorrect with the spec, please file an issue so we can help you as soon as we can.
