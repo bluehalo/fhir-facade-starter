@@ -27,10 +27,9 @@ module.exports.strategy = new Strategy(
 				// TODO: context could come in many forms, you need to decide how to handle it.
 				// it could also be decodedToken.patient etc...
 				let { scope, context, sub, user_id } = decoded_token;
-				let user = {user_id, sub};
 
 				// return scopes and context.  Both required
-				return done(null, user, {scope, context});
+				return done(null, { user_id, sub, scope, context });
 			}
 
 			// default return unauthorized
