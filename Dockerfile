@@ -1,18 +1,17 @@
-FROM node:8.9.4
+FROM node:lts-alpine
 
 # Update everything on the box
-RUN apt-get -y update
-RUN apt-get clean
+RUN apk update
 
 # Set the working directory
-WORKDIR /srv/src
+WORKDIR /srv
 
 # Copy our package.json & install our dependencies
-COPY package.json /srv/src/package.json
-RUN yarn install
+COPY package.json /srv/package.json
+RUN npm install --production
 
 # Copy the remaining application code
-COPY . /srv/src
+COPY . /srv/
 
 # Start the app
-CMD yarn start
+CMD npm start
