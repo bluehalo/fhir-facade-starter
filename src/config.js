@@ -18,7 +18,7 @@ let whitelist = whitelist_env && whitelist_env.length === 1
 let fhirServerConfig = {
 	auth: {
 		// This servers URI
-		resourceServer: env.RESOURCE_SERVER,
+		resourceServer: env.RESOURCE_SERVER || 'http://localhost:3000',
 		//
 		// if you use this strategy, you need to add the corresponding env vars to docker-compose
 		//
@@ -30,7 +30,7 @@ let fhirServerConfig = {
 	},
 	server: {
 		// support various ENV that uses PORT vs SERVER_PORT
-		port: env.PORT || env.SERVER_PORT,
+		port: env.PORT || env.SERVER_PORT || 3000,
 		// allow Access-Control-Allow-Origin
 		corsOptions: {
 			maxAge: 86400,
@@ -38,23 +38,23 @@ let fhirServerConfig = {
 		}
 	},
 	logging: {
-		level: env.LOGGING_LEVEL
+		level: env.LOGGING_LEVEL || 'warn'
 	},
 	//
 	// If you want to set up conformance statement with security enabled
 	// Uncomment the following block
 	//
-	security: [
-		{
-			url: 'authorize',
-			valueUri: `${env.AUTH_SERVER_URI}/authorize`
-		},
-		{
-			url: 'token',
-			valueUri: `${env.AUTH_SERVER_URI}/token`
-		}
-		// optional - registration
-	],
+	// security: [
+	// 	{
+	// 		url: 'authorize',
+	// 		valueUri: `${env.AUTH_SERVER_URI}/authorize`
+	// 	},
+	// 	{
+	// 		url: 'token',
+	// 		valueUri: `${env.AUTH_SERVER_URI}/token`
+	// 	}
+	// 	// optional - registration
+	// ],
 	//
 	// Comment out any profiles you do not wish to support.  Each profile can support multiple versions
 	// if supported by core.  We currently only have 3_0_1 profiles but will soon support DSTU2 and R4 versions.
